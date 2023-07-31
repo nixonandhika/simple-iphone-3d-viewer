@@ -9,10 +9,11 @@ Title: iPhone 14 Pro Max
 
 import React from 'react'
 import { useGLTF } from '@react-three/drei'
+import IphoneModel from './assets/iphone_14_pro_max.glb';
 
 export function Iphone(props) {
   const { customColor, ...rest } = props;
-  const { nodes, materials } = useGLTF('/iphone_14_pro_max.glb')
+  const { nodes, materials } = useGLTF(IphoneModel);
 
   return (
     <group {...rest} dispose={null}>
@@ -179,6 +180,6 @@ export function Iphone(props) {
   )
 }
 
-useGLTF.preload('/iphone_14_pro_max.glb')
+useGLTF.preload(IphoneModel);
 
 export default Iphone;
